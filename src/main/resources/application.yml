@@ -14,3 +14,9 @@ logging:
     org:
       hibernate:
         SQL: debug
+
+s3:
+  accessKey: minio
+  secretKey: miniopass
+  region: ap-northeast-1
+  endPoint: http://localhost:9000
