@@ -2,7 +2,7 @@
 CREATE TABLE IF NOT EXISTS task (
     id INT auto_increment primary key,
     name VARCHAR(255) NOT NULL,
-    file_id VARCHAR(255)
+    file_id VARCHAR(MAX)
 );
 
 --csvで登録する側
