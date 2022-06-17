@@ -1,9 +1,9 @@
----
-spring.profiles: default
-spring.profiles.active: local
+#spring2.4以降から環境毎にプロファイル変える書き方変わったらしい
+#https://zenn:dev/yukiko_bass/scraps/13b66b17ac9a05:
 
----
-spring.profiles: local
-
----
-spring.profiles: dev
+spring:
+  profiles:
+    group:
+      dev:
+        - dev
+      default: local
