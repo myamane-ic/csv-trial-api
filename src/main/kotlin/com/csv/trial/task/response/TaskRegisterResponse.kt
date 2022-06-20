@@ -5,11 +5,13 @@ import com.csv.trial.task.repository.entity.Task
 class TaskRegisterResponse(
         val id: Int,
         val taskName: String,
+        val fileName: String,
         val preSignedUrl: String
 ) {
-    constructor(task: Task) : this(
+    constructor(task: Task, preSignedUrl: String) : this(
             id = task.id!!,
             taskName = task.name!!,
-            preSignedUrl = task.fileId!!
+            fileName = task.fileId!!,
+            preSignedUrl = preSignedUrl
     )
 }

@@ -26,13 +26,14 @@ class RegisterService(
                 .withMethod(HttpMethod.PUT)
                 .withExpiration(expiration)
         val preSignedUrl = s3.generatePresignedUrl(request).toURI().toString()
+        println("PresingedUrl: $preSignedUrl")
 
         //登録
         val task = Task(
                 name = form.taskName,
-                fileId = preSignedUrl
+                fileId = form.fileName
         )
         val created = taskRepository.saveAndFlush(task)
-        return TaskRegisterResponse(created)
+        return TaskRegisterResponse(created, preSignedUrl)
     }
 }
