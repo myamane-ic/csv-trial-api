@@ -59,7 +59,7 @@ class RegisterService(
         val uri = ""
 
         //実行
-        val response = restTemplate.postForEntity(uri,lambdaUrlRequest, LambdaUrlResponse::class.java)
+        val response = restTemplate.postForEntity(uri,lambdaUrlRequest, String::class.java)
 
         //結果確認
         println(response)
