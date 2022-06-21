@@ -17,7 +17,6 @@ import java.util.Date
 class RegisterService(
         private val taskRepository: ITaskRepository,
         private val s3: AmazonS3,
-        private val restTemplate: RestTemplate
 ) {
     fun register(form: TaskRegisterForm): TaskRegisterResponse {
 
@@ -47,6 +46,8 @@ class RegisterService(
         LambdaURLにHTTPS通信
         認証は一旦無視
          */
+        val restTemplate = RestTemplate()
+
         //RequestBody
         val lambdaUrlRequest = LambdaUrlRequest(
                 taskId = task.id!!
