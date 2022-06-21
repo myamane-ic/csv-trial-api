@@ -11,7 +11,6 @@ import com.csv.trial.task.service.lambdaurl.req.LambdaUrlRequest
 import com.csv.trial.task.service.lambdaurl.res.LambdaUrlResponse
 import org.springframework.scheduling.annotation.Async
 import org.springframework.stereotype.Service
-import org.springframework.web.client.AsyncRestTemplate
 import org.springframework.web.client.RestTemplate
 import java.util.Date
 
