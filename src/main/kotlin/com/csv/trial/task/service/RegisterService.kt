@@ -50,15 +50,20 @@ class RegisterService(
     */
     fun invokeLambda(taskId: Int) {
 
+        //TODO 設定値に持たせる
         val functionName = "myamane-lambda"
-        print(functionName)
+        println(functionName)
 
+        //リクエスト生成
         val invokeRequest = InvokeRequest()
                 .withFunctionName(functionName)
-                .withPayload("""{"taskId":"1"}""")
+                //TODO クラスで持たせてデシリアライズ
+                .withPayload("\"{\"taskId\":\"$taskId\"}\"")
 
+        //実行
         val response = lambda.invoke(invokeRequest)
 
-        print(response)
+        //レスポンス
+        println(response)
     }
 }
