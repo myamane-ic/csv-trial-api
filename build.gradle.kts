@@ -31,6 +31,8 @@ dependencies {
 
 	//AWS
 	implementation("com.amazonaws:aws-java-sdk-s3:1.12.231")
+	implementation("com.amazonaws:aws-java-sdk-lambda:1.12.244")
+
 }
 
 tasks.withType<KotlinCompile> {
