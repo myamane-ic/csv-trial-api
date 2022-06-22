@@ -54,7 +54,7 @@ class RegisterService(
         val functionName = "myamane-lambda"
         println(functionName)
 
-        val payload = "{\'taskId\':\'$taskId\'}"
+        val payload = "{'taskId':'$taskId'}"
         println(payload)
 
         //リクエスト生成
