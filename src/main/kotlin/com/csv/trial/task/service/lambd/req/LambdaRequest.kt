@@ -1,6 +1,6 @@
-package com.csv.trial.task.service.lambdaurl.req
+package com.csv.trial.task.service.lambd.req
 
 //LambdaFunctionURLに送るリクエストボディ
-class LambdaUrlRequest(
+class LambdaRequest(
         val taskId : Int
 )
