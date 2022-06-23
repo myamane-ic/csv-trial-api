@@ -38,7 +38,7 @@ class RegisterService(
         )
         val created = taskRepository.saveAndFlush(task)
 
-        //LambdaURLにHTTPS通信
+        //Lambda関数起動
         invokeLambda(taskId = task.id!!)
 
         return TaskRegisterResponse(created, preSignedUrl)
@@ -50,7 +50,6 @@ class RegisterService(
     */
     fun invokeLambda(taskId: Int) {
 
-        //TODO 設定値に持たせる
         val functionName = "myamane-lambda"
         println(functionName)
 
