@@ -15,8 +15,9 @@ logging:
       hibernate:
         SQL: debug
 
-s3:
-  accessKey: minio
-  secretKey: miniopass
+aws:
+  accessKey: hogehoge
+  secretKey: fugafuga
   region: ap-northeast-1
-  endPoint: http://localhost:9000
+  s3:
+    endPoint: http://localhost:9000

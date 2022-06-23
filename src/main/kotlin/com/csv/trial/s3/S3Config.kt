@@ -13,16 +13,16 @@ import org.springframework.context.annotation.Configuration
 @Configuration
 class S3Config {
 
-    @Value("\${s3.accessKey}")
+    @Value("\${aws.accessKey}")
     val accessKey: String = ""
 
-    @Value("\${s3.secretKey}")
+    @Value("\${aws.secretKey}")
     val secretKey: String = ""
 
-    @Value("\${s3.region}")
+    @Value("\${aws.region}")
     val region: String? = ""
 
-    @Value("\${s3.endPoint}")
+    @Value("\${aws.s3.endPoint}")
     val endPoint: String = ""
 
     @Bean

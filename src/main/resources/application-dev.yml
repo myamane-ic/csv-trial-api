@@ -19,8 +19,9 @@ logging:
       zaxxer:
         hikari: debug
 
-s3:
+aws:
   accessKey: ${AWS_ACCESS_KEY}
   secretKey: ${AWS_SECRET_KEY}
   region: ap-northeast-1
-  endPoint: https://s3-ap-northeast-1.amazonaws.com
+  s3:
+    endPoint: https://s3-ap-northeast-1.amazonaws.com
