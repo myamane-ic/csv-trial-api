@@ -25,7 +25,7 @@ class RegisterService(
         var expirationInMs = expiration.time
         expirationInMs += (1000 * 60).toLong()
         expiration.time = expirationInMs
-        val request = GeneratePresignedUrlRequest("testbucket", form.fileName)
+        val request = GeneratePresignedUrlRequest("myamane-trial-bucket", form.fileName)
                 .withMethod(HttpMethod.PUT)
                 .withExpiration(expiration)
         val preSignedUrl = s3.generatePresignedUrl(request).toURI().toString()
